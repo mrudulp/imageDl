@@ -16,9 +16,6 @@ class MyHtmlParserTest(unittest.TestCase):
 		if not os.path.exists(self._download_test_dir):
 			os.makedirs(self._download_test_dir);
 
-		if not os.path.exists(self._create_folder_dir):
-			os.makedirs(self._create_folder_dir)
-
 	def tearDown(self):
 		# print "Tearing Down :::"
 		self._mhtp = None
@@ -27,9 +24,6 @@ class MyHtmlParserTest(unittest.TestCase):
 		if os.path.exists(self._download_test_dir):
 			self.removeDir(self._download_test_dir);
 			os.removedirs(self._download_test_dir);
-		if os.path.exists(self._create_folder_dir):
-			self.removeDir(self._create_folder_dir);
-			os.removedirs(self._create_folder_dir);
 
 	def removeDir(self,dirName):
 		for root, dirs, files in os.walk(dirName, topdown=False):
